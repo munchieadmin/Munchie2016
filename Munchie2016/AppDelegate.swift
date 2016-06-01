@@ -10,12 +10,24 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    //Secret Keys from Backendless
+    let APP_ID = "AA9D0225-3DF1-DC0F-FF91-2B1E67968100"
+    let SECRET_KEY = "3CF6B0FE-103B-3F22-FF4E-5671000E6900"
+    let VERSION_NUM = "v1"
 
     var window: UIWindow?
+    
+    //Creating an instance which can be shared once initialized
+    var backendless = Backendless.sharedInstance()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        //Initializing the Backendless APP to the server with public & private keys
+        backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        
+        
+        
         return true
     }
 
