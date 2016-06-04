@@ -10,16 +10,16 @@ import UIKit
 
 class LasVegasNightclub_details: NSObject{
     //Object strings
-    //var name: String!
+    var name: String!
     var objectId: String?
     var address: String?
     var hours: String?
     
-    override var name: String? {
-        get { return super.text }
-        
-        set(v){  super.text = v }
-    }
+//    override var name: String? {
+//        get { return super.text }
+//        
+//        set(v){  super.text = v }
+//    }
     
 }
 
@@ -29,7 +29,7 @@ class TableViewController: UITableViewController {
     var backendless = Backendless.sharedInstance()
     
     //Create array to save backendless object strings
-    var arrayOfNightclubs: [String] = []
+    var arrayOfNightclubs: [String?] = []
     
     @IBOutlet weak var stringLabel: UILabel!
 

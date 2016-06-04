@@ -32,7 +32,7 @@ class MunchieLogin: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        //backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         
         dismissViewControllerAnimated(true, completion:nil)
         
