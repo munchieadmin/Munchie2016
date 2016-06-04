@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  Munchie2016
 //
-//  Created by Corbin Benally on 5/22/16.
+//  Created by Corbin Benally on 6/4/16.
 //  Copyright © 2016 Munchie Meets. All rights reserved.
 //
 
@@ -15,12 +15,6 @@ class LasVegasNightclub_details: NSObject{
     var address: String?
     var hours: String?
     
-//    override var name: String? {
-//        get { return super.text }
-//        
-//        set(v){  super.text = v }
-//    }
-    
 }
 
 
@@ -29,19 +23,20 @@ class TableViewController: UITableViewController {
     var backendless = Backendless.sharedInstance()
     
     //Create array to save backendless object strings
-    var arrayOfNightclubs: [String?] = []
+    //var arrayOfNightclubs: [String?] = []
+    var ArrayOfNightclubs:Array< String > = Array < String >()
     
-    @IBOutlet weak var stringLabel: UILabel!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         //
-        tableView.reloadData()
+        //tableView.reloadData()
+        tableView.delegate = self
+        tableView.dataSource = self
         fetchingNightclubDetails()
         
         
     }
-
+    
     
     
     func fetchingNightclubDetails() {
@@ -59,11 +54,19 @@ class TableViewController: UITableViewController {
                 print("Loaded \(currentPage.count) nightclub objects")
                 for result in currentPage as! [LasVegasNightclub_details] {
                     print("Nightclub name = \(result.name)")
-                    for i in 1...18 {
-                    //self.arrayOfNightclubs.insert("\(result.name)", atIndex: i)
-                        self.arrayOfNightclubs.append("\(result.name!)")
-                        self.stringLabel?.text = "\(result.name)"
+
+                        //self.arrayOfNightclubs.insert("\(result.name)", atIndex: i)
+                    
+                    if let id = result.name {
+                        //Do something you want
+                        self.ArrayOfNightclubs.append(result.name)
+                        self.do_table_refresh()
+                        
+                    } else {
+                        //Print the error
+                        print(result.name)
                     }
+
                     
                 }
                 
@@ -78,32 +81,60 @@ class TableViewController: UITableViewController {
     }
     
     
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-
-
+    //    override func didReceiveMemoryWarning() {
+    //        super.didReceiveMemoryWarning()
+    //        // Dispose of any resources that can be recreated.
+    //    }
+    
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
+        //var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
-        }
+        var data = ArrayOfNightclubs[indexPath.row]
         
-        cell.textLabel?.text = arrayOfNightclubs[indexPath.row]
+        
+        cell.textLabel?.text = data
+        
+//        if (data == nil){
+//        cell.textLabel?.text = data
+//        }
+//        else
+//        {
+//         print("Reaching tableview cell")
+//        }
+        
+        
+//        if cell == nil {
+//            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
+//        }
+//        
+//        cell.textLabel?.text = ArrayOfNightclubs[indexPath.row]
         //cell.textLabel?.text = "Corbin Test"
-
-
+        
+        
+        
+        
+        
+        
         return cell
     }
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-    return arrayOfNightclubs.count
+        return ArrayOfNightclubs.count
+    }
+    
+    
+    func do_table_refresh()
+    {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.reloadData()
+            return
+        })
     }
 
+    
 }
-
