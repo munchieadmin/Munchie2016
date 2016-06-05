@@ -92,7 +92,7 @@ class TableViewController: UITableViewController {
         //var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        var data = ArrayOfNightclubs[indexPath.row]
+        let data = ArrayOfNightclubs[indexPath.row]
         
         
         cell.textLabel?.text = data
