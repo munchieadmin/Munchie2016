@@ -11,9 +11,9 @@ import UIKit
 class LasVegasNightclub_details: NSObject{
     //Object strings
     var name: String!
-    var objectId: String?
-    var address: String?
-    var hours: String?
+    var objectId: String!
+    var address: String!
+    var hours: String!
     
 }
 
