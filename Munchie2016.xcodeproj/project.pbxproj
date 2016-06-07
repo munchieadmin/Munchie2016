@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		608C0765FC0D27715E9463C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C917101C08E844147B16E591 /* libPods.a */; };
 		9C4432EB1CFFCF7D00066CA6 /* MunchieLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4432EA1CFFCF7D00066CA6 /* MunchieLogin.swift */; };
+		9CEBBA921D06541100243780 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEBBA911D06541000243780 /* MapKit.framework */; };
 		9D1CC4F11D03992B00ABB971 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CC4F01D03992B00ABB971 /* TableViewController.swift */; };
 		9D404EB31D03739E003474AA /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D404EB21D03739E003474AA /* SwiftyJSON.swift */; };
 		9F8D04271CF260E50057C42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D04261CF260E50057C42A /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		5F61531375B2770870330CF8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7605B2743F2261615595D896 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9C4432EA1CFFCF7D00066CA6 /* MunchieLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MunchieLogin.swift; sourceTree = "<group>"; };
+		9CEBBA911D06541000243780 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9D1CC4F01D03992B00ABB971 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9D404EB21D03739E003474AA /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9F8D04231CF260E50057C42A /* Munchie2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munchie2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEBBA921D06541100243780 /* MapKit.framework in Frameworks */,
 				608C0765FC0D27715E9463C3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +89,7 @@
 		26A99229B87EBE6F3B53F50E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CEBBA911D06541000243780 /* MapKit.framework */,
 				C917101C08E844147B16E591 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -235,6 +239,11 @@
 					9F8D04221CF260E50057C42A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 3S9T5B9X63;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					9F8D04361CF260E50057C42A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -494,10 +503,12 @@
 			baseConfigurationReference = 5F61531375B2770870330CF8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Munchie2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.munchie.Munchie2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -506,10 +517,12 @@
 			baseConfigurationReference = 7605B2743F2261615595D896 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Munchie2016/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.munchie.Munchie2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

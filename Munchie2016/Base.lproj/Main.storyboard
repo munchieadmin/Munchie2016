@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iYX-Pa-Li3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LM9-jm-obr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--What's Trending-->
@@ -17,12 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wE0-oL-AVA">
-                                <rect key="frame" x="0.0" y="39" width="600" height="512"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wE0-oL-AVA">
+                                <rect key="frame" x="0.0" y="51" width="600" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Munchie Meets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c80-Fr-xFE">
+                                <rect key="frame" x="228" y="20" width="144" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="0.1019607843" green="0.56470588239999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wE0-oL-AVA" firstAttribute="centerX" secondItem="c80-Fr-xFE" secondAttribute="centerX" id="4ZH-V3-lBK"/>
+                            <constraint firstItem="c80-Fr-xFE" firstAttribute="top" secondItem="OlD-9s-iA9" secondAttribute="bottom" id="Oar-hI-txn"/>
+                            <constraint firstItem="c80-Fr-xFE" firstAttribute="centerX" secondItem="56h-50-E5N" secondAttribute="centerX" id="Zip-gh-dgx"/>
+                            <constraint firstItem="wE0-oL-AVA" firstAttribute="top" secondItem="c80-Fr-xFE" secondAttribute="bottom" constant="10" id="rov-jE-XOR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="What's Trending" image="first" id="KC2-oT-gKK"/>
                 </viewController>
@@ -60,55 +73,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8K-8v-IFq">
-                                <rect key="frame" x="0.0" y="41" width="600" height="44"/>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8K-8v-IFq">
+                                <rect key="frame" x="0.0" y="52" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DjO-wF-4V1">
-                                <rect key="frame" x="0.0" y="85" width="600" height="612"/>
+                                <rect key="frame" x="0.0" y="96" width="600" height="612"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUM-g7-O7b">
-                                        <rect key="frame" x="0.0" y="73" width="600" height="48"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                        <state key="normal" title="Bars"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-tK-bSp">
-                                        <rect key="frame" x="0.0" y="129" width="600" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-tK-bSp">
+                                        <rect key="frame" x="0.0" y="127" width="600" height="48"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <state key="normal" title="Coffee "/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqd-bL-lP6">
-                                        <rect key="frame" x="0.0" y="185" width="600" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXu-4a-RU9">
+                                        <rect key="frame" x="0.0" y="239" width="600" height="48"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Events"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqd-bL-lP6">
+                                        <rect key="frame" x="0.0" y="183" width="600" height="48"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <state key="normal" title="Nightlife"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grE-iL-Xiz">
-                                        <rect key="frame" x="0.0" y="20" width="600" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUM-g7-O7b">
+                                        <rect key="frame" x="0.0" y="71" width="600" height="48"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Bars"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grE-iL-Xiz">
+                                        <rect key="frame" x="0.0" y="18" width="600" height="45"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <state key="normal" title="Restaurants"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="XXu-4a-RU9" firstAttribute="width" secondItem="yqd-bL-lP6" secondAttribute="width" id="30d-63-hpq"/>
+                                    <constraint firstItem="yqd-bL-lP6" firstAttribute="width" secondItem="Gcb-tK-bSp" secondAttribute="width" id="3AJ-Os-PyX"/>
+                                    <constraint firstItem="XXu-4a-RU9" firstAttribute="centerX" secondItem="yqd-bL-lP6" secondAttribute="centerX" id="Dtf-aS-Xue"/>
+                                    <constraint firstItem="KUM-g7-O7b" firstAttribute="width" secondItem="grE-iL-Xiz" secondAttribute="width" id="Hns-yt-bZY"/>
+                                    <constraint firstItem="Gcb-tK-bSp" firstAttribute="centerX" secondItem="KUM-g7-O7b" secondAttribute="centerX" id="TxP-eQ-B1J"/>
+                                    <constraint firstItem="yqd-bL-lP6" firstAttribute="centerX" secondItem="Gcb-tK-bSp" secondAttribute="centerX" id="quY-lQ-DUf"/>
+                                    <constraint firstItem="Gcb-tK-bSp" firstAttribute="width" secondItem="KUM-g7-O7b" secondAttribute="width" id="t3k-fq-qUR"/>
+                                    <constraint firstItem="KUM-g7-O7b" firstAttribute="centerX" secondItem="grE-iL-Xiz" secondAttribute="centerX" id="yvF-OU-n5L"/>
+                                </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Munchie Meets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVX-QO-7qo">
-                                <rect key="frame" x="227" y="13" width="146" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Munchie Meets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVX-QO-7qo">
+                                <rect key="frame" x="228" y="20" width="144" height="21"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <color key="textColor" red="0.1019607843" green="0.56470588239999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V8K-8v-IFq" firstAttribute="top" secondItem="LVX-QO-7qo" secondAttribute="bottom" constant="11" id="7g5-bd-ERi"/>
+                            <constraint firstItem="grE-iL-Xiz" firstAttribute="centerX" secondItem="V8K-8v-IFq" secondAttribute="centerX" id="DZo-Ie-6PF"/>
+                            <constraint firstItem="grE-iL-Xiz" firstAttribute="width" secondItem="V8K-8v-IFq" secondAttribute="width" id="IOe-C3-1Cg"/>
+                            <constraint firstItem="V8K-8v-IFq" firstAttribute="width" secondItem="WDh-t8-655" secondAttribute="width" id="Mlz-Vf-grz"/>
+                            <constraint firstItem="V8K-8v-IFq" firstAttribute="centerX" secondItem="LVX-QO-7qo" secondAttribute="centerX" id="TCU-lb-ub7"/>
+                            <constraint firstItem="LVX-QO-7qo" firstAttribute="centerX" secondItem="WDh-t8-655" secondAttribute="centerX" id="TvD-6t-sE4"/>
+                            <constraint firstItem="LVX-QO-7qo" firstAttribute="top" secondItem="YuL-A6-vSf" secondAttribute="bottom" id="XZW-S2-wJ1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="first" id="8rp-jZ-q8y"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVi-tW-RUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-953" y="-1403"/>
+            <point key="canvasLocation" x="-955" y="-1403"/>
         </scene>
         <!--Nearby-->
         <scene sceneID="yES-TH-hbw">
@@ -122,31 +158,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2hm-Lx-pLU">
-                                <rect key="frame" x="0.0" y="69" width="600" height="482"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2hm-Lx-pLU">
+                                <rect key="frame" x="0.0" y="98" width="600" height="470"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="d7e-94-Us6"/>
+                                    <constraint firstAttribute="width" constant="600" id="eoy-e1-I7E"/>
+                                </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-mZ-Ffr">
-                                <rect key="frame" x="8" y="23" width="87" height="44"/>
-                                <color key="backgroundColor" red="0.2666666667" green="0.72156862749999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-mZ-Ffr">
+                                <rect key="frame" x="10" y="46" width="92" height="44"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="List">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1019607843" green="0.56470588239999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-eq-ygi">
-                                <rect key="frame" x="105" y="23" width="390" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-oq-AqP">
+                                <rect key="frame" x="505" y="46" width="92" height="44"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" red="0.1019607843" green="0.56470588239999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Munchie Meets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qg-AN-NDD">
+                                <rect key="frame" x="228" y="20" width="144" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="0.1019607843" green="0.56470588239999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-eq-ygi">
+                                <rect key="frame" x="105" y="46" width="390" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-oq-AqP">
-                                <rect key="frame" x="506" y="23" width="87" height="44"/>
-                                <color key="backgroundColor" red="0.2666666667" green="0.72156862749999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Filter">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2hm-Lx-pLU" firstAttribute="top" secondItem="DcP-eq-ygi" secondAttribute="bottom" constant="8" id="2WX-7l-Gph"/>
+                            <constraint firstItem="2hm-Lx-pLU" firstAttribute="width" secondItem="JLK-ZT-TbP" secondAttribute="width" id="7fh-Jb-c22"/>
+                            <constraint firstItem="T9d-oq-AqP" firstAttribute="top" secondItem="8br-Xo-PJu" secondAttribute="bottom" constant="26" id="7sB-5T-nhc"/>
+                            <constraint firstItem="DcP-eq-ygi" firstAttribute="height" secondItem="T9d-oq-AqP" secondAttribute="height" id="9N7-Cm-y1s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T9d-oq-AqP" secondAttribute="trailing" constant="-12" id="G5R-LL-cD2"/>
+                            <constraint firstItem="T9d-oq-AqP" firstAttribute="leading" secondItem="DcP-eq-ygi" secondAttribute="trailing" constant="10" id="HYk-Ck-e64"/>
+                            <constraint firstItem="YbX-mZ-Ffr" firstAttribute="top" secondItem="8br-Xo-PJu" secondAttribute="bottom" constant="26" id="Ika-ca-cCy"/>
+                            <constraint firstItem="YbX-mZ-Ffr" firstAttribute="height" secondItem="DcP-eq-ygi" secondAttribute="height" id="KS8-BX-ScJ"/>
+                            <constraint firstItem="DcP-eq-ygi" firstAttribute="leading" secondItem="YbX-mZ-Ffr" secondAttribute="trailing" constant="8" id="O5D-Hy-7mg"/>
+                            <constraint firstItem="DcP-eq-ygi" firstAttribute="centerX" secondItem="1Qg-AN-NDD" secondAttribute="centerX" id="V9l-Hj-PIT"/>
+                            <constraint firstItem="YbX-mZ-Ffr" firstAttribute="width" secondItem="T9d-oq-AqP" secondAttribute="width" id="Yw5-a1-9gq"/>
+                            <constraint firstItem="YbX-mZ-Ffr" firstAttribute="leading" secondItem="JLK-ZT-TbP" secondAttribute="leadingMargin" constant="-10" id="cBE-I6-76m"/>
+                            <constraint firstItem="1Qg-AN-NDD" firstAttribute="top" secondItem="8br-Xo-PJu" secondAttribute="bottom" id="pjh-rP-Nbr"/>
+                            <constraint firstItem="DcP-eq-ygi" firstAttribute="top" secondItem="1Qg-AN-NDD" secondAttribute="bottom" constant="5" id="qMA-JQ-lsT"/>
+                            <constraint firstItem="1Qg-AN-NDD" firstAttribute="centerX" secondItem="JLK-ZT-TbP" secondAttribute="centerX" id="wFq-cS-EbD"/>
+                            <constraint firstItem="2hm-Lx-pLU" firstAttribute="centerX" secondItem="DcP-eq-ygi" secondAttribute="centerX" id="yEs-cN-JPi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nearby" id="P7v-Q0-Ur0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -186,6 +250,7 @@
                         <segue destination="LM9-jm-obr" kind="relationship" relationship="viewControllers" id="NHk-gZ-gpS"/>
                         <segue destination="I04-N8-eWz" kind="relationship" relationship="viewControllers" id="UDJ-so-7by"/>
                         <segue destination="6yu-kT-KXr" kind="relationship" relationship="viewControllers" id="vfC-HK-dPN"/>
+                        <segue destination="iYX-Pa-Li3" kind="relationship" relationship="viewControllers" id="Ujo-aY-qhw"/>
                         <segue destination="rXM-F2-xjf" kind="relationship" relationship="viewControllers" id="6Iw-6f-btX"/>
                     </connections>
                 </tabBarController>
@@ -193,20 +258,20 @@
             </objects>
             <point key="canvasLocation" x="113" y="-2252"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Search-->
         <scene sceneID="fFm-Ya-DRA">
             <objects>
-                <tableViewController id="iYX-Pa-Li3" customClass="TableViewController" customModule="Munchie2016" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OHN-S5-rgK">
+                <tableViewController title="Search" id="iYX-Pa-Li3" customClass="TableViewController" customModule="Munchie2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" id="OHN-S5-rgK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="VKW-e1-wUV">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="39" id="VKW-e1-wUV">
+                                <rect key="frame" x="0.0" y="28" width="600" height="39"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VKW-e1-wUV" id="0Q8-6U-y3D">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="38"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -216,10 +281,11 @@
                             <outlet property="delegate" destination="iYX-Pa-Li3" id="NYC-PB-z6U"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Search" image="first" id="lUy-rn-gMH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOL-9s-OSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="-2204"/>
+            <point key="canvasLocation" x="992" y="-1403"/>
         </scene>
         <!--About Me-->
         <scene sceneID="TcP-QL-T5X">
@@ -233,51 +299,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-5e-rWA">
-                                <rect key="frame" x="-6" y="38" width="606" height="537"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Munchie Meets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KL2-IF-7bj">
+                                <rect key="frame" x="219" y="20" width="156" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="0.1019607843" green="0.56470588239999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-5e-rWA">
+                                <rect key="frame" x="-6" y="49" width="606" height="526"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-Bd-irQ">
-                                        <rect key="frame" x="8" y="189" width="598" height="48"/>
+                                        <rect key="frame" x="8" y="178" width="598" height="48"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <state key="normal" title="Messages"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpy-LL-yiP">
-                                        <rect key="frame" x="8" y="245" width="598" height="48"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                        <state key="normal" title="Friends"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwh-ZG-jWo">
-                                        <rect key="frame" x="8" y="301" width="598" height="48"/>
+                                        <rect key="frame" x="8" y="290" width="598" height="48"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <state key="normal" title="Favorites"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcx-Cm-Ugg">
-                                        <rect key="frame" x="8" y="357" width="598" height="48"/>
+                                        <rect key="frame" x="8" y="346" width="598" height="48"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                        <state key="normal" title="Post in last 2 weeks"/>
+                                        <state key="normal" title="Last 2 weeks"/>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2q-Xk-pgq">
-                                        <rect key="frame" x="183" y="24" width="240" height="128"/>
+                                        <rect key="frame" x="183" y="13" width="240" height="128"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpy-LL-yiP">
+                                        <rect key="frame" x="8" y="234" width="598" height="48"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Friends"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="bT4-Bd-irQ" firstAttribute="top" secondItem="V2q-Xk-pgq" secondAttribute="bottom" constant="47" id="kvZ-H1-75H"/>
+                                    <constraint firstItem="V2q-Xk-pgq" firstAttribute="centerX" secondItem="cgJ-5e-rWA" secondAttribute="centerX" id="4sk-nm-NL0"/>
+                                    <constraint firstItem="V2q-Xk-pgq" firstAttribute="leading" secondItem="cgJ-5e-rWA" secondAttribute="leading" constant="183" id="o2L-wv-oJ4"/>
+                                    <constraint firstAttribute="trailing" secondItem="V2q-Xk-pgq" secondAttribute="trailing" constant="183" id="qiv-bb-GbU"/>
+                                    <constraint firstItem="bT4-Bd-irQ" firstAttribute="top" secondItem="V2q-Xk-pgq" secondAttribute="bottom" constant="37" id="wyO-bF-Dwi"/>
+                                    <constraint firstItem="V2q-Xk-pgq" firstAttribute="top" secondItem="cgJ-5e-rWA" secondAttribute="top" constant="13" id="xJu-nF-quh"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Munchie Meets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KL2-IF-7bj">
-                                <rect key="frame" x="219" y="15" width="156" height="21"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
-                                <color key="textColor" red="0.1019607843" green="0.56470588239999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="V2q-Xk-pgq" firstAttribute="top" secondItem="KL2-IF-7bj" secondAttribute="bottom" constant="16" id="Mho-8F-GJe"/>
+                            <constraint firstItem="cgJ-5e-rWA" firstAttribute="top" secondItem="FJf-WC-W6E" secondAttribute="bottom" constant="29" id="3oo-55-G3S"/>
+                            <constraint firstItem="cgJ-5e-rWA" firstAttribute="top" secondItem="KL2-IF-7bj" secondAttribute="bottom" constant="8" id="6FO-JH-gTL"/>
+                            <constraint firstItem="KL2-IF-7bj" firstAttribute="centerX" secondItem="lfL-4y-3zh" secondAttribute="centerX" id="J7u-r9-6lF"/>
+                            <constraint firstItem="cgJ-5e-rWA" firstAttribute="centerX" secondItem="lfL-4y-3zh" secondAttribute="centerX" id="O8b-3O-8qi"/>
+                            <constraint firstItem="KL2-IF-7bj" firstAttribute="top" secondItem="FJf-WC-W6E" secondAttribute="bottom" id="ZOf-az-eD7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About Me" id="2qp-BB-xd8"/>
