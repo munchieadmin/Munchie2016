@@ -18,6 +18,7 @@
 		9F8D04311CF260E50057C42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8D042F1CF260E50057C42A /* LaunchScreen.storyboard */; };
 		9F8D043C1CF260E50057C42A /* Munchie2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D043B1CF260E50057C42A /* Munchie2016Tests.swift */; };
 		9F8D04471CF260E50057C42A /* Munchie2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D04461CF260E50057C42A /* Munchie2016UITests.swift */; };
+		9FA0E9FA1D07F74400A6C8B5 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0E9F91D07F74400A6C8B5 /* NearbyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		9F8D04421CF260E50057C42A /* Munchie2016UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Munchie2016UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8D04461CF260E50057C42A /* Munchie2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Munchie2016UITests.swift; sourceTree = "<group>"; };
 		9F8D04481CF260E50057C42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FA0E9F91D07F74400A6C8B5 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		C917101C08E844147B16E591 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 			children = (
 				9C4432E51CFFCECF00066CA6 /* Login */,
 				9F8D04261CF260E50057C42A /* AppDelegate.swift */,
+				9FA0E9F91D07F74400A6C8B5 /* NearbyViewController.swift */,
 				9D404EB21D03739E003474AA /* SwiftyJSON.swift */,
 				9D1CC4F01D03992B00ABB971 /* TableViewController.swift */,
 				9F8D042A1CF260E50057C42A /* Main.storyboard */,
@@ -359,6 +362,7 @@
 			files = (
 				9C4432EB1CFFCF7D00066CA6 /* MunchieLogin.swift in Sources */,
 				9F8D04271CF260E50057C42A /* AppDelegate.swift in Sources */,
+				9FA0E9FA1D07F74400A6C8B5 /* NearbyViewController.swift in Sources */,
 				9D404EB31D03739E003474AA /* SwiftyJSON.swift in Sources */,
 				9D1CC4F11D03992B00ABB971 /* TableViewController.swift in Sources */,
 			);
