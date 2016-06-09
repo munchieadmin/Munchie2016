@@ -94,28 +94,10 @@ class TableViewController: UITableViewController {
         
         let data = ArrayOfNightclubs[indexPath.row]
         
-        
+        //prints strings stored in struct
         cell.textLabel?.text = data
         
-//        if (data == nil){
-//        cell.textLabel?.text = data
-//        }
-//        else
-//        {
-//         print("Reaching tableview cell")
-//        }
-        
-        
-//        if cell == nil {
-//            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
-//        }
-//        
-//        cell.textLabel?.text = ArrayOfNightclubs[indexPath.row]
-        //cell.textLabel?.text = "Corbin Test"
-        
-        
-        
-        
+
         
         
         return cell
@@ -123,7 +105,7 @@ class TableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        //creates number of rows in the tableview
         return ArrayOfNightclubs.count
     }
     
