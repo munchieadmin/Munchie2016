@@ -16,8 +16,10 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
     
     //Create array to save backendless object strings
     //var arrayOfNightclubs: [String?] = []
-    var latsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
-    var longsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
+    var latsOfNightclubs: [Double] = []
+    var longsOfNightclubs: [Double] = []
+    //var latsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
+    //var longsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
     
     @IBOutlet weak var myMapView: MKMapView!
     let myLocationManager = CLLocationManager()
@@ -46,10 +48,21 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         //get most recent coordinate
         let myCoordinate = locations[locations.count - 1]
         
+        //create double to convert
+        
         //get lat and long
-        let nightclubLatitude = latsOfNightclubs
+        let nightclubLatitude = Double(self.latsOfNightclubs)
+
         let nightclubLongitude = longsOfNightclubs
-        let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude as Double , longitude: nightclubLongitude as Double)
+        
+        //var latDouble:Double
+        
+        
+        //latDouble = nightclubLatitude as Double
+        
+        
+        
+        let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude, longitude: nightclubLongitude)
         
         //set view span
         //center map at this region
