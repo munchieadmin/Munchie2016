@@ -16,10 +16,17 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
     
     //Create array to save backendless object strings
     //var arrayOfNightclubs: [String?] = []
-    var latsOfNightclubs: [Double] = []
-    var longsOfNightclubs: [Double] = []
+
+    //var latsOfNightclubs: [Double] = []
+    //var longsOfNightclubs: [Double] = []
+    var latsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
+    var longsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
+
+    //var latsOfNightclubs: [Double] = []
+    //var longsOfNightclubs: [Double] = []
     //var latsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
     //var longsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
+
     
     @IBOutlet weak var myMapView: MKMapView!
     let myLocationManager = CLLocationManager()
@@ -51,9 +58,25 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         //create double to convert
         
         //get lat and long
-        let nightclubLatitude = Double(self.latsOfNightclubs)
 
-        let nightclubLongitude = longsOfNightclubs
+        //let nightclubLatitude = Double(self.latsOfNightclubs)
+
+        //let nightclubLongitude = longsOfNightclubs
+
+//        let nightclubLatitude = latsOfNightclubs
+//        let nightclubLongitude = longsOfNightclubs
+//        let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude as Double , longitude: nightclubLongitude as Double)
+        
+        let myLat = myCoordinate.coordinate.latitude
+        let myLong = myCoordinate.coordinate.longitude
+        let myCoor2D = CLLocationCoordinate2D(latitude: myLat, longitude: myLong)
+        //let nightclubLatitude = Double(self.latsOfNightclubs)
+
+        //let nightclubLongitude = longsOfNightclubs
+        //let nightclubLatitude = Double(self.latsOfNightclubs)
+
+        //let nightclubLongitude = longsOfNightclubs
+
         
         //var latDouble:Double
         
@@ -62,11 +85,26 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         
         
         
-        let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude, longitude: nightclubLongitude)
-        
+
+        //let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude, longitude: nightclubLongitude)
+
+        //let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude, longitude: nightclubLongitude)
+
+        //let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude, longitude: nightclubLongitude)
+
         //set view span
+        let myLatDelta = 0.05
+        let myLongDelta = 0.05
+        let mySpan = MKCoordinateSpan(latitudeDelta: myLatDelta, longitudeDelta: myLongDelta)
+        
         //center map at this region
+        let myRegion = MKCoordinateRegion(center: myCoor2D, span: mySpan)
+        myMapView.setRegion(myRegion, animated: true)
+        
         //add annotation
+        let myAnno = MKPointAnnotation()
+        myAnno.coordinate = myCoor2D
+        myMapView.addAnnotation(myAnno)
         
         //test to verify
         
