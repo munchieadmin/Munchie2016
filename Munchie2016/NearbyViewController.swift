@@ -5,7 +5,6 @@
 //  Created by Corbin Benally on 6/7/16.
 //
 //
-
 import Foundation
 import UIKit
 import MapKit
@@ -14,19 +13,8 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
     //Create Backendless instance
     var backendless = Backendless.sharedInstance()
     
-    //Create array to save backendless object strings
-    //var arrayOfNightclubs: [String?] = []
-
-    //var latsOfNightclubs: [Double] = []
-    //var longsOfNightclubs: [Double] = []
-    var latsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
-    var longsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
-
-    //var latsOfNightclubs: [Double] = []
-    //var longsOfNightclubs: [Double] = []
-    //var latsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
-    //var longsOfNightclubs:Array<NSNumber> = Array <NSNumber>()
-
+    var latsOfNightclubs:Array<GeoPoint> = Array <GeoPoint>()
+    var longsOfNightclubs:Array<GeoPoint> = Array <GeoPoint>()
     
     @IBOutlet weak var myMapView: MKMapView!
     let myLocationManager = CLLocationManager()
@@ -45,7 +33,6 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -55,42 +42,12 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         //get most recent coordinate
         let myCoordinate = locations[locations.count - 1]
         
-        //create double to convert
-        
         //get lat and long
-
-        //let nightclubLatitude = Double(self.latsOfNightclubs)
-
-        //let nightclubLongitude = longsOfNightclubs
-
-//        let nightclubLatitude = latsOfNightclubs
-//        let nightclubLongitude = longsOfNightclubs
-//        let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude as Double , longitude: nightclubLongitude as Double)
-        
         let myLat = myCoordinate.coordinate.latitude
         let myLong = myCoordinate.coordinate.longitude
         let myCoor2D = CLLocationCoordinate2D(latitude: myLat, longitude: myLong)
-        //let nightclubLatitude = Double(self.latsOfNightclubs)
-
-        //let nightclubLongitude = longsOfNightclubs
-        //let nightclubLatitude = Double(self.latsOfNightclubs)
-
-        //let nightclubLongitude = longsOfNightclubs
-
-        
-        //var latDouble:Double
         
         
-        //latDouble = nightclubLatitude as Double
-        
-        
-        
-
-        //let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude, longitude: nightclubLongitude)
-
-        //let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude, longitude: nightclubLongitude)
-
-        //let nightclubCoord2D  = CLLocationCoordinate2D(latitude: nightclubLatitude, longitude: nightclubLongitude)
 
         //set view span
         let myLatDelta = 0.05
@@ -106,12 +63,11 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         myAnno.coordinate = myCoor2D
         myMapView.addAnnotation(myAnno)
         
+        
+        
         //test to verify
         
     }
-    
-    
-    
     
     
     func loadGeoPointsAsync() {
@@ -142,8 +98,8 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         let geoPoints = points.getCurrentPage() as! [GeoPoint]
         for geoPoint in geoPoints {
             print("\(geoPoint)")
-            self.latsOfNightclubs.append(geoPoint.latitude)
-            self.longsOfNightclubs.append(geoPoint.longitude)
+            self.latsOfNightclubs.append(geoPoint)
+            self.longsOfNightclubs.append(geoPoint)
             
         }
         
