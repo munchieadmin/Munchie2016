@@ -1,1 +1,5 @@
+use_frameworks!
+target "Munchie2016" do
 pod 'Backendless'
+pod 'FBAnnotationClusteringSwift'
+end

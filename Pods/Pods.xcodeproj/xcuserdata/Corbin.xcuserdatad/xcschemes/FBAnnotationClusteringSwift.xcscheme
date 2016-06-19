@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8D0CD51ACD68916CCD2A7139'
-               BlueprintName = 'Pods'
+               BlueprintIdentifier = '423C10F04A172BB11C7A3702F8F09B90'
+               BlueprintName = 'FBAnnotationClusteringSwift'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods.a'>
+               BuildableName = 'FBAnnotationClusteringSwift.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

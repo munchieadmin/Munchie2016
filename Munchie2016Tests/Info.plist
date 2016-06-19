@@ -18,6 +18,8 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This helps Munchie Meets locate you</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 </dict>
