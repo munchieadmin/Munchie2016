@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		608C0765FC0D27715E9463C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C917101C08E844147B16E591 /* libPods.a */; };
 		9C4432EB1CFFCF7D00066CA6 /* MunchieLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4432EA1CFFCF7D00066CA6 /* MunchieLogin.swift */; };
 		9CEBBA921D06541100243780 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEBBA911D06541000243780 /* MapKit.framework */; };
 		9D1CC4F11D03992B00ABB971 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CC4F01D03992B00ABB971 /* TableViewController.swift */; };
-		9D404EB31D03739E003474AA /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D404EB21D03739E003474AA /* SwiftyJSON.swift */; };
 		9F8D04271CF260E50057C42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D04261CF260E50057C42A /* AppDelegate.swift */; };
 		9F8D042C1CF260E50057C42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8D042A1CF260E50057C42A /* Main.storyboard */; };
 		9F8D042E1CF260E50057C42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8D042D1CF260E50057C42A /* Assets.xcassets */; };
@@ -19,6 +17,7 @@
 		9F8D043C1CF260E50057C42A /* Munchie2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D043B1CF260E50057C42A /* Munchie2016Tests.swift */; };
 		9F8D04471CF260E50057C42A /* Munchie2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D04461CF260E50057C42A /* Munchie2016UITests.swift */; };
 		9FA0E9FA1D07F74400A6C8B5 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0E9F91D07F74400A6C8B5 /* NearbyViewController.swift */; };
+		F50996BB172D556B7833D477 /* Pods_Munchie2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B55E393C3AD21C2006B0763 /* Pods_Munchie2016.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5F61531375B2770870330CF8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		7605B2743F2261615595D896 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		98D77E6C4E2F1D448DE40E8D /* Pods-Munchie2016.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munchie2016.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Munchie2016/Pods-Munchie2016.debug.xcconfig"; sourceTree = "<group>"; };
+		9B55E393C3AD21C2006B0763 /* Pods_Munchie2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Munchie2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4432EA1CFFCF7D00066CA6 /* MunchieLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MunchieLogin.swift; sourceTree = "<group>"; };
 		9CEBBA911D06541000243780 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9D1CC4F01D03992B00ABB971 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		9D404EB21D03739E003474AA /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9F8D04231CF260E50057C42A /* Munchie2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munchie2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8D04261CF260E50057C42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F8D042B1CF260E50057C42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +56,7 @@
 		9F8D04461CF260E50057C42A /* Munchie2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Munchie2016UITests.swift; sourceTree = "<group>"; };
 		9F8D04481CF260E50057C42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA0E9F91D07F74400A6C8B5 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
-		C917101C08E844147B16E591 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B883D156E4C0566267DA8E89 /* Pods-Munchie2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Munchie2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-Munchie2016/Pods-Munchie2016.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CEBBA921D06541100243780 /* MapKit.framework in Frameworks */,
-				608C0765FC0D27715E9463C3 /* libPods.a in Frameworks */,
+				F50996BB172D556B7833D477 /* Pods_Munchie2016.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,16 +90,16 @@
 			isa = PBXGroup;
 			children = (
 				9CEBBA911D06541000243780 /* MapKit.framework */,
-				C917101C08E844147B16E591 /* libPods.a */,
+				9B55E393C3AD21C2006B0763 /* Pods_Munchie2016.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9A77920B57B714300FD07007 /* Pods */ = {
+		57A484F7C33E19B862AAD47E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5F61531375B2770870330CF8 /* Pods.debug.xcconfig */,
-				7605B2743F2261615595D896 /* Pods.release.xcconfig */,
+				98D77E6C4E2F1D448DE40E8D /* Pods-Munchie2016.debug.xcconfig */,
+				B883D156E4C0566267DA8E89 /* Pods-Munchie2016.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -121,8 +119,8 @@
 				9F8D043A1CF260E50057C42A /* Munchie2016Tests */,
 				9F8D04451CF260E50057C42A /* Munchie2016UITests */,
 				9F8D04241CF260E50057C42A /* Products */,
-				9A77920B57B714300FD07007 /* Pods */,
 				26A99229B87EBE6F3B53F50E /* Frameworks */,
+				57A484F7C33E19B862AAD47E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,7 +140,6 @@
 				9C4432E51CFFCECF00066CA6 /* Login */,
 				9F8D04261CF260E50057C42A /* AppDelegate.swift */,
 				9FA0E9F91D07F74400A6C8B5 /* NearbyViewController.swift */,
-				9D404EB21D03739E003474AA /* SwiftyJSON.swift */,
 				9D1CC4F01D03992B00ABB971 /* TableViewController.swift */,
 				9F8D042A1CF260E50057C42A /* Main.storyboard */,
 				9F8D042D1CF260E50057C42A /* Assets.xcassets */,
@@ -177,12 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F8D044B1CF260E50057C42A /* Build configuration list for PBXNativeTarget "Munchie2016" */;
 			buildPhases = (
-				696A24BF5E5C3E131B56DF42 /* Check Pods Manifest.lock */,
+				E5B846A7CAD5ECF4C6698A53 /* [CP] Check Pods Manifest.lock */,
 				9F8D041F1CF260E50057C42A /* Sources */,
 				9F8D04201CF260E50057C42A /* Frameworks */,
 				9F8D04211CF260E50057C42A /* Resources */,
-				D55903B6FD7CC836282D0D56 /* Embed Pods Frameworks */,
-				D5ACDD1A980261CB7AB94FDD /* Copy Pods Resources */,
+				F9312AEDD8CAE3F1B12186C5 /* [CP] Embed Pods Frameworks */,
+				B6ECDED3BD402C04BBB6D71A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,14 +305,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		696A24BF5E5C3E131B56DF42 /* Check Pods Manifest.lock */ = {
+		B6ECDED3BD402C04BBB6D71A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Munchie2016/Pods-Munchie2016-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B846A7CAD5ECF4C6698A53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,34 +335,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D55903B6FD7CC836282D0D56 /* Embed Pods Frameworks */ = {
+		F9312AEDD8CAE3F1B12186C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D5ACDD1A980261CB7AB94FDD /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Munchie2016/Pods-Munchie2016-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -363,7 +360,6 @@
 				9C4432EB1CFFCF7D00066CA6 /* MunchieLogin.swift in Sources */,
 				9F8D04271CF260E50057C42A /* AppDelegate.swift in Sources */,
 				9FA0E9FA1D07F74400A6C8B5 /* NearbyViewController.swift in Sources */,
-				9D404EB31D03739E003474AA /* SwiftyJSON.swift in Sources */,
 				9D1CC4F11D03992B00ABB971 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,7 +500,7 @@
 		};
 		9F8D044C1CF260E50057C42A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F61531375B2770870330CF8 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 98D77E6C4E2F1D448DE40E8D /* Pods-Munchie2016.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -518,7 +514,7 @@
 		};
 		9F8D044D1CF260E50057C42A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7605B2743F2261615595D896 /* Pods.release.xcconfig */;
+			baseConfigurationReference = B883D156E4C0566267DA8E89 /* Pods-Munchie2016.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

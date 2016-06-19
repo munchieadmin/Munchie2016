@@ -47,22 +47,34 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         let myLong = myCoordinate.coordinate.longitude
         let myCoor2D = CLLocationCoordinate2D(latitude: myLat, longitude: myLong)
         
-        
+        //let clubLat = Double(latsOfNightclubs[0].latitude)
+        //let clubLong = Double(longsOfNightclubs[0].longitude)
+        //let clubCoord2D = CLLocationCoordinate2D(latitude: clubLat, longitude: clubLong)
 
         //set view span
         let myLatDelta = 0.05
         let myLongDelta = 0.05
         let mySpan = MKCoordinateSpan(latitudeDelta: myLatDelta, longitudeDelta: myLongDelta)
         
+        //club span
+        //let clubSpan = MKCoordinateSpan(latitudeDelta: clubLat, longitudeDelta: clubLong)
+        
         //center map at this region
         let myRegion = MKCoordinateRegion(center: myCoor2D, span: mySpan)
+        //myMapView.setRegion(myRegion, animated: true)
+        
+        //let clubRegion = MKCoordinateRegion(center: clubCoord2D, span: clubSpan)
         myMapView.setRegion(myRegion, animated: true)
+        
         
         //add annotation
         let myAnno = MKPointAnnotation()
         myAnno.coordinate = myCoor2D
-        myMapView.addAnnotation(myAnno)
         
+        let clubAnno = MKPointAnnotation()
+        //clubAnno.coordinate = clubCoord2D
+        
+        myMapView.addAnnotation(myAnno)
         
         
         //test to verify
