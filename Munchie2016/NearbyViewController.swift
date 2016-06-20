@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import MapKit
+import FBAnnotationClusteringSwift
 
 class NearbyViewController: UIViewController, CLLocationManagerDelegate {
     //Create Backendless instance
@@ -19,6 +20,9 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var myMapView: MKMapView!
     let myLocationManager = CLLocationManager()
     
+    //declare clustering manager
+    let clusterManager = FBClusteringManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,7 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         myLocationManager.startUpdatingLocation()
         myLocationManager.delegate = self
         
+        let clusterArray:[MKAnnotation] = latsOfNightclubs
         loadGeoPointsAsync()
         
     }
@@ -111,7 +116,7 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         for geoPoint in geoPoints {
             print("\(geoPoint)")
             self.latsOfNightclubs.append(geoPoint)
-            self.longsOfNightclubs.append(geoPoint)
+            //self.longsOfNightclubs.append(geoPoint)
             
         }
         
