@@ -220,7 +220,7 @@
                     <tabBarItem key="tabBarItem" title="Nearby" id="P7v-Q0-Ur0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="myMapView" destination="2hm-Lx-pLU" id="BWB-1j-wX3"/>
+                        <outlet property="myMapView" destination="2hm-Lx-pLU" id="qRx-09-1yt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPO-Ul-MSz" userLabel="First Responder" sceneMemberID="firstResponder"/>

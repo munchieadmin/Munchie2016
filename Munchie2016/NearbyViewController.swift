@@ -10,14 +10,15 @@ import UIKit
 import MapKit
 import FBAnnotationClusteringSwift
 
-class NearbyViewController: UIViewController, CLLocationManagerDelegate {
+class NearbyViewController: UIViewController, CLLocationManagerDelegate{
     //Create Backendless instance
     var backendless = Backendless.sharedInstance()
+    @IBOutlet weak var myMapView: MKMapView!
     
     var latsOfNightclubs:Array<FBAnnotation> = Array <FBAnnotation>()
     //var longsOfNightclubs:Array<GeoPoint> = Array <GeoPoint>()
     
-    @IBOutlet weak var myMapView: MKMapView!
+
     let myLocationManager = CLLocationManager()
     
     //declare clustering manager
@@ -32,10 +33,11 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         myLocationManager.startUpdatingLocation()
         myLocationManager.delegate = self
         
-        //let clusterArray:[MKAnnotation] = latsOfNightclubs
+        
+        let clusterArray:[MKAnnotation] = latsOfNightclubs
         loadGeoPointsAsync()
         //hmmmm nothing is displaying
-        clusterManager.addAnnotations(latsOfNightclubs)
+        clusterManager.addAnnotations(clusterArray)
         
     }
     
@@ -54,10 +56,6 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         let myLong = myCoordinate.coordinate.longitude
         let myCoor2D = CLLocationCoordinate2D(latitude: myLat, longitude: myLong)
         
-        //let clubLat = Double(latsOfNightclubs[0].latitude)
-        //let clubLong = Double(longsOfNightclubs[0].longitude)
-        //let clubCoord2D = CLLocationCoordinate2D(latitude: clubLat, longitude: clubLong)
-
         //set view span
         let myLatDelta = 0.05
         let myLongDelta = 0.05
@@ -68,10 +66,7 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         
         //center map at this region
         let myRegion = MKCoordinateRegion(center: myCoor2D, span: mySpan)
-        //myMapView.setRegion(myRegion, animated: true)
-        
-        //let clubRegion = MKCoordinateRegion(center: clubCoord2D, span: clubSpan)
-        myMapView.setRegion(myRegion, animated: true)
+
         
         
         //add annotation
@@ -79,10 +74,11 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         myAnno.coordinate = myCoor2D
         
         let clubAnno = MKPointAnnotation()
-        //clubAnno.coordinate = clubCoord2D
+
         
-        //myMapView.addAnnotation(myAnno)
-        clusterManager.addAnnotations(latsOfNightclubs)
+        let clusterArray:[MKAnnotation] = latsOfNightclubs
+        //hmmmm nothing is displaying
+        clusterManager.addAnnotations(clusterArray)
         
         
         //test to verify
@@ -127,6 +123,7 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
             pinOne.coordinate = CLLocationCoordinate2D(latitude: Double(geoPoint.latitude), longitude: Double(geoPoint.longitude))
             latsOfNightclubs.append(pinOne)
             
+            
         }
         
         points.nextPageAsync(
@@ -139,6 +136,7 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         )
     }
 }
+
     extension NearbyViewController: MKMapViewDelegate {
         
         func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool){
@@ -168,6 +166,7 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         }
         
     }
+
     
     
     
