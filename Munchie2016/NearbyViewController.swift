@@ -32,9 +32,11 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate{
         myLocationManager.requestWhenInUseAuthorization()
         myLocationManager.startUpdatingLocation()
         myLocationManager.delegate = self
+        myMapView.delegate = self
         
         
         let clusterArray:[MKAnnotation] = latsOfNightclubs
+        
         loadGeoPointsAsync()
         //hmmmm nothing is displaying
         clusterManager.addAnnotations(clusterArray)
