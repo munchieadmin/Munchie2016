@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6yu-kT-KXr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eCt-1l-v3O">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -48,7 +48,7 @@
         <!--Login-->
         <scene sceneID="X1o-35-D4C">
             <objects>
-                <viewController title="Login" id="jRG-tO-YaX" sceneMemberID="viewController">
+                <viewController title="Login" id="jRG-tO-YaX" customClass="MunchieLogin" customModule="Munchie2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="18l-ZF-wJJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Le5-ek-nYF"/>
@@ -74,12 +74,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VG-lr-IzO">
-                                <rect key="frame" x="249" y="293" width="103" height="30"/>
-                                <color key="backgroundColor" red="0.21628208569999999" green="0.98185426890000005" blue="1" alpha="0.31147065029999998" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Login"/>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYi-aN-TcO">
                                 <rect key="frame" x="207" y="209" width="186" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -90,6 +84,9 @@
                                 <color key="backgroundColor" red="0.21628208569999999" green="0.98185426890000005" blue="1" alpha="0.31147065029999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <segue destination="kTn-HP-zvM" kind="showDetail" id="zlx-JF-eoc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't Have An Account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-bo-HiD">
                                 <rect key="frame" x="183" y="471" width="235" height="25"/>
@@ -97,9 +94,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VG-lr-IzO">
+                                <rect key="frame" x="249" y="290" width="103" height="36"/>
+                                <color key="backgroundColor" red="0.21628208569999999" green="0.98185426890000005" blue="1" alpha="0.31147065029999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInClicked:" destination="jRG-tO-YaX" eventType="touchUpInside" id="gbo-PT-PKD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="userEmailAddress" destination="GYi-aN-TcO" id="TnG-da-XNf"/>
+                        <outlet property="userPassword" destination="CXZ-4U-AXD" id="Tnm-Cx-4oe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPY-Mh-nGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,10 +284,10 @@
             </objects>
             <point key="canvasLocation" x="331" y="-1403"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="fLM-uj-tj2">
             <objects>
-                <viewController id="kTn-HP-zvM" sceneMemberID="viewController">
+                <viewController id="kTn-HP-zvM" customClass="SignUpViewController" customModule="Munchie2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="faQ-TI-3m2"/>
                         <viewControllerLayoutGuide type="bottom" id="Yd9-Q8-gPb"/>
@@ -331,15 +341,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGK-0f-1Fy">
-                                <rect key="frame" x="293" y="359" width="103" height="30"/>
-                                <color key="backgroundColor" red="0.21628208569999999" green="0.98185426890000005" blue="1" alpha="0.31147065029999998" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="103" id="p4R-yJ-5cV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Lets Meet!"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-l9-bJd">
                                 <rect key="frame" x="210" y="359" width="69" height="30"/>
                                 <color key="backgroundColor" red="0.020796136219463746" green="1" blue="0.87519338408087366" alpha="0.39292124155405406" colorSpace="calibratedRGB"/>
@@ -349,6 +350,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearTextFields:" destination="kTn-HP-zvM" eventType="touchUpInside" id="pRn-vP-BKj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Munchie Meets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dse-eQ-h0O">
                                 <rect key="frame" x="221" y="28" width="144" height="21"/>
@@ -359,6 +363,27 @@
                                 <color key="textColor" red="0.1019607843" green="0.56470588239999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-PK-Dxq">
+                                <rect key="frame" x="225" y="448" width="151" height="30"/>
+                                <color key="backgroundColor" red="0.21628208569999999" green="0.98185426890000005" blue="1" alpha="0.31147065029999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back to Log In"/>
+                                <connections>
+                                    <segue destination="jRG-tO-YaX" kind="show" id="XTa-5E-bcx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGK-0f-1Fy">
+                                <rect key="frame" x="293" y="359" width="103" height="30"/>
+                                <color key="backgroundColor" red="0.21628208569999999" green="0.98185426890000005" blue="1" alpha="0.31147065029999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="p4R-yJ-5cV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Let's Meet!"/>
+                                <connections>
+                                    <action selector="submitUserRegistration:" destination="kTn-HP-zvM" eventType="touchUpInside" id="Ljw-pc-Qxq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -391,6 +416,13 @@
                             <constraint firstItem="peK-lF-Cnu" firstAttribute="trailing" secondItem="ZXy-sa-5Wv" secondAttribute="trailing" id="ybF-Jj-5wi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signUpDateOfBirth" destination="s8o-gi-ydS" id="ycq-qW-ryN"/>
+                        <outlet property="signUpEmail" destination="Q9H-i2-FyW" id="onh-Ab-tEK"/>
+                        <outlet property="signUpFirstName" destination="peK-lF-Cnu" id="noT-Te-UuA"/>
+                        <outlet property="signUpLastName" destination="ZXy-sa-5Wv" id="cIU-EI-0cA"/>
+                        <outlet property="signUpPassword" destination="6dd-WP-915" id="OyH-ff-FUY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lz6-By-MiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -430,7 +462,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="39"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VKW-e1-wUV" id="0Q8-6U-y3D">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="38"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="38.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -524,6 +556,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M1J-t7-9v7"/>
+        <segue reference="Ujo-aY-qhw"/>
     </inferredMetricsTieBreakers>
 </document>
