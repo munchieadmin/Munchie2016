@@ -10,6 +10,7 @@
 		9C4432EB1CFFCF7D00066CA6 /* MunchieLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4432EA1CFFCF7D00066CA6 /* MunchieLogin.swift */; };
 		9CEBBA921D06541100243780 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEBBA911D06541000243780 /* MapKit.framework */; };
 		9D1CC4F11D03992B00ABB971 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CC4F01D03992B00ABB971 /* TableViewController.swift */; };
+		9D448FD71D3B006C005476F8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D448FD61D3B006C005476F8 /* SignUpViewController.swift */; };
 		9F8D04271CF260E50057C42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D04261CF260E50057C42A /* AppDelegate.swift */; };
 		9F8D042C1CF260E50057C42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8D042A1CF260E50057C42A /* Main.storyboard */; };
 		9F8D042E1CF260E50057C42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8D042D1CF260E50057C42A /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		9C4432EA1CFFCF7D00066CA6 /* MunchieLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MunchieLogin.swift; sourceTree = "<group>"; };
 		9CEBBA911D06541000243780 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9D1CC4F01D03992B00ABB971 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9D448FD61D3B006C005476F8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9F8D04231CF260E50057C42A /* Munchie2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munchie2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8D04261CF260E50057C42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F8D042B1CF260E50057C42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,30 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		9D448FD81D3B0077005476F8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9D448FD61D3B006C005476F8 /* SignUpViewController.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		9D448FD91D3B009E005476F8 /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				9FA0E9F91D07F74400A6C8B5 /* NearbyViewController.swift */,
+			);
+			name = Nearby;
+			sourceTree = "<group>";
+		};
+		9D448FDA1D3B00B0005476F8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9D1CC4F01D03992B00ABB971 /* TableViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		9F8D041A1CF260E50057C42A = {
 			isa = PBXGroup;
 			children = (
@@ -137,10 +163,11 @@
 		9F8D04251CF260E50057C42A /* Munchie2016 */ = {
 			isa = PBXGroup;
 			children = (
+				9D448FDA1D3B00B0005476F8 /* Search */,
+				9D448FD91D3B009E005476F8 /* Nearby */,
+				9D448FD81D3B0077005476F8 /* SignUp */,
 				9C4432E51CFFCECF00066CA6 /* Login */,
 				9F8D04261CF260E50057C42A /* AppDelegate.swift */,
-				9FA0E9F91D07F74400A6C8B5 /* NearbyViewController.swift */,
-				9D1CC4F01D03992B00ABB971 /* TableViewController.swift */,
 				9F8D042A1CF260E50057C42A /* Main.storyboard */,
 				9F8D042D1CF260E50057C42A /* Assets.xcassets */,
 				9F8D042F1CF260E50057C42A /* LaunchScreen.storyboard */,
@@ -361,6 +388,7 @@
 				9F8D04271CF260E50057C42A /* AppDelegate.swift in Sources */,
 				9FA0E9FA1D07F74400A6C8B5 /* NearbyViewController.swift in Sources */,
 				9D1CC4F11D03992B00ABB971 /* TableViewController.swift in Sources */,
+				9D448FD71D3B006C005476F8 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

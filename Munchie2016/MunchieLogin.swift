@@ -20,15 +20,11 @@ class MunchieLogin: UIViewController {
     }
     
     
-    @IBAction func LogIn(sender: AnyObject) {
+    @IBAction func logInClicked(sender: AnyObject) {
         
-        userLoginSync(userEmailAddress, userPass: userPassword)
-        
-        //        self.performSegueWithIdentifier(
-        //"loginSuccess", sender: self)
-        
-        
+                userLoginSync(userEmailAddress, userPass: userPassword)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
