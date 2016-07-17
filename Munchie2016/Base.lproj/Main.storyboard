@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eCt-1l-v3O">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6yu-kT-KXr">
+>>>>>>> whateverBranch
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -45,10 +49,14 @@
             </objects>
             <point key="canvasLocation" x="-309" y="-1403"/>
         </scene>
-        <!--Login-->
+        <!--View Controller-->
         <scene sceneID="X1o-35-D4C">
             <objects>
+<<<<<<< HEAD
                 <viewController title="Login" id="jRG-tO-YaX" customClass="MunchieLogin" customModule="Munchie2016" customModuleProvider="target" sceneMemberID="viewController">
+=======
+                <viewController id="jRG-tO-YaX" sceneMemberID="viewController">
+>>>>>>> whateverBranch
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="18l-ZF-wJJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Le5-ek-nYF"/>
@@ -56,6 +64,7 @@
                     <view key="view" contentMode="scaleToFill" id="az8-Kl-xWW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Munchie Meets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRN-uQ-Uzc">
                                 <rect key="frame" x="228" y="28" width="144" height="21"/>
@@ -104,6 +113,8 @@
                                 </connections>
                             </button>
                         </subviews>
+=======
+>>>>>>> whateverBranch
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
@@ -277,7 +288,7 @@
                     <tabBarItem key="tabBarItem" title="Nearby" id="P7v-Q0-Ur0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="myMapView" destination="2hm-Lx-pLU" id="qRx-09-1yt"/>
+                        <outlet property="myMapView" destination="2hm-Lx-pLU" id="BWB-1j-wX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPO-Ul-MSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
