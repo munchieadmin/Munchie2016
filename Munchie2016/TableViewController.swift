@@ -97,9 +97,7 @@ class TableViewController: UITableViewController {
         //prints strings stored in struct
         cell.textLabel?.text = data
         
-
-        
-        
+  
         return cell
     }
     
