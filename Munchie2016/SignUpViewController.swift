@@ -16,7 +16,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpFirstName: UITextField!
     @IBOutlet weak var signUpLastName: UITextField!
     @IBOutlet weak var signUpDateOfBirth: UITextField!
-    
+    //Create Backendless instance
+    var backendless = Backendless.sharedInstance()
     
     
     override func viewDidLoad() {
