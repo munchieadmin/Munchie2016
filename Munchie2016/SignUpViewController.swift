@@ -19,6 +19,8 @@ class SignUpViewController: UIViewController {
     //Create Backendless instance
     var backendless = Backendless.sharedInstance()
     
+    var backendless = Backendless.sharedInstance()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
