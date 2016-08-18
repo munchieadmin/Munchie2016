@@ -18,6 +18,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpDateOfBirth: UITextField!
     
     
+    var backendless = Backendless.sharedInstance()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
